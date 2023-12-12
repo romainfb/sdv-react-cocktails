@@ -3,7 +3,7 @@
 
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com) [![Awesome](https://awesome.re/badge.svg)](https://romainfb.github.io/bordeauxwc/)
 
-BordeauxWC is a student project designed by Romain F and Yanis S, two B3 development students at Sup de Vinci Bordeaux. This site is the result of a project in our **versioning course**, aimed at applying our theoretical knowledge in a practical context. BordeauxWC uses Bordeaux Métropole's open API to list the city's public sanitation facilities.
+SDV React Cocktails is an application developed in React as part of our development license training. It needs to retrieve information using a public API, process it and arrange it in several components.
 
 ## Workflow
 https://github.com/romainfb/sdv-react-cocktails/wiki/Workflow
