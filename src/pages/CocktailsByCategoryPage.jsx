@@ -7,19 +7,20 @@ import { useParams } from 'react-router-dom';
 const CocktailsByCategoryPage = () => {
 
     const {category} = useParams();
+    const sanitizedCategory = category.replaceAll('-', '/');
     
     const [cocktails, setCocktails] = useState(null);
 
     useEffect(() => {
         (async () => {
 
-            const cocktailsResponse = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`);
+            const cocktailsResponse = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${sanitizedCategory}`);
             const cocktailsResponseData = await cocktailsResponse.json();
 
             setCocktails(cocktailsResponseData["drinks"]);
 
         })();
-    }, [category]);
+    }, [sanitizedCategory]);
 
     return (
         <>
@@ -30,7 +31,7 @@ const CocktailsByCategoryPage = () => {
 
             {cocktails ? (
                 <>
-                    <h2 className="text-4xl font-black pb-12 text-center">Cocktails dans la catégorie {category}</h2>
+                    <h2 className="text-4xl font-black pb-12 text-center">Cocktails dans la catégorie {sanitizedCategory}</h2>
 
                     {cocktails.map((cocktail) => (
 

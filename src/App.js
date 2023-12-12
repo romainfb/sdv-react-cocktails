@@ -10,6 +10,7 @@ import GlassesPages from './pages/GlassesPage';
 import CocktailsByCategoryPage from './pages/CocktailsByCategoryPage';
 import CocktailsByIngredientPage from './pages/CocktailsByIngredientPage';
 import CocktailsByGlassePage from './pages/CocktailsByGlassePage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
 
         <Route path="/cocktails/details/:id" element={<CocktailDetailsPage />} />
         <Route path="/cocktails/search/:name" element={<SearchCocktailsPage />} />
+
+        <Route path="*" element={<NotFoundPage />}/> 
 
       </Routes>
     </BrowserRouter>
