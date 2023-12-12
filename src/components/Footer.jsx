@@ -3,7 +3,7 @@ const Footer = () => {
     return (
         <footer className="w-full h-20 shadow-lg text-stone-950">
 
-            <div className="flex h-full w-full px-8 justify-between items-center">
+            <div className="flex h-full w-full px-8 justify-between items-center flex-col sm:flex-row">
 
                 <div className="flex flex-row items-center space-x-2">
                     <img src="https://cdn.icon-icons.com/icons2/3261/PNG/512/reactjs_logo_icon_206693.png" alt="" className="h-10" />
