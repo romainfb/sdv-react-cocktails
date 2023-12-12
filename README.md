@@ -1,8 +1,46 @@
-# Getting Started with Create React App
+# SDV React Cocktails
+## _Search cocktails around the world - **React** project_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com) [![Awesome](https://awesome.re/badge.svg)](https://romainfb.github.io/bordeauxwc/)
 
-## Available Scripts
+BordeauxWC is a student project designed by Romain F and Yanis S, two B3 development students at Sup de Vinci Bordeaux. This site is the result of a project in our **versioning course**, aimed at applying our theoretical knowledge in a practical context. BordeauxWC uses Bordeaux Métropole's open API to list the city's public sanitation facilities.
+
+## Workflow
+https://github.com/romainfb/sdv-react-cocktails/wiki/Workflow
+
+
+## Project objectives
+
+| Objective (FRENCH)     | Achieved |
+| ------------- | ------------- |
+| Section avec les 4 derniers cocktails publiés : au click sur un cocktail => affiche la page de détail du cocktail. Au click sur le titre de la section : affiche la page qui affiche tous les cocktails  | Done!  |
+| Section avec une catégorie affichée au hasard. Au click sur la catégorie => affiche la page de liste des cocktails par catégorie. Au click sur le titre de la section => affiche la page de liste des catégories  | Done!  |
+|Au clic sur un cocktail => affiche la page de détail d’un cocktail | Done!|
+|Page de détail d’un cocktail avec titre, image, ingrédients, description, catégorie, date de modif |Done!|
+|Au clic sur une catégorie => affiche la page de liste des cocktails pour la catégorie en question  («Filter by category»)|Done!|
+|Au clic sur un ingrédient => affiche la page de liste des cocktails pour l’ingrédient en question («Search by ingredient»)|Done!|
+|Au clic sur une catégorie => affiche la page de liste des cocktails par catégorie|Done!|
+|Page qui affiche les cocktails liés à une catégorie|Done!|
+|Page qui affiche les ingrédients|Done!|
+|Page qui affiche les verres|Done!|
+|Header avec menu et barre de recherche|Done!|
+|Page de résultat de recherche|Done!|
+
+| Complements (FRENCH)    | Achieved |
+| ------------- | ------------- |
+| Design libre mais propre. Tous les éléments des différentes pages doivent être stylisés et le responsive géré. Utilisation de libs (bootstrap, tailwind etc) possible.  | Done!  |
+| Des points seront ajoutés / retirés en fonction de la qualité de code : nommage des variables, DRY (duplication de code) etc.  | Done!  |
+
+
+## Contributors
+
+| Contributors list     |
+| ------------- |
+|[@romainfb](https://github.com/romainfb)|
+
+## Set-up
+
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -38,33 +76,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
