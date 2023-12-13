@@ -15,7 +15,7 @@ const RandomCategory = () => {
     useEffect(() => {
         (async () => {
 
-            const categoriesResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
+            const categoriesResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list');
             const categoriesResponseData = await categoriesResponse.json();
 
             setCategories(categoriesResponseData["drinks"][Math.floor(Math.random() * categoriesResponseData["drinks"].length)]);
@@ -35,7 +35,7 @@ const RandomCategory = () => {
                         <h2 className="text-4xl font-black text-center mb-20">Catégorie aléatoire</h2>
                     </Link>
 
-                    <Link to={`/cocktails/category/${category.strCategory}`} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center">
+                    <Link to={`/cocktails/category/${category.strCategory.replaceAll('/', '-')}`} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center">
                             <h3 className="text-2xl font-black pb-4">{category.strCategory}</h3>
                     </Link>
                     
@@ -47,11 +47,9 @@ const RandomCategory = () => {
                 </>
             )}
 
-
-
         </section>
 
-      );
+    );
 
 }
 

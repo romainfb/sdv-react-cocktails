@@ -24,9 +24,12 @@ const Header = () => {
             <div className="flex h-20 w-full px-8 justify-between items-center">
 
                 <div className="flex flex-row items-center space-x-2 w-26">
-                    <img src="https://cdn.icon-icons.com/icons2/3261/PNG/512/reactjs_logo_icon_206693.png" alt="" className="h-10" />
-                    <span className="font-black uppercase text-lg">SDV Cocktails</span>
 
+                    <Link to={"/"} className="flex flex-row items-center justify-center space-x-2">
+                        <img src="https://cdn.icon-icons.com/icons2/3261/PNG/512/reactjs_logo_icon_206693.png" alt="" className="h-10" />
+                        <span className="font-black uppercase text-lg">SDV Cocktails</span>
+                    </Link>
+                    
                     <div className="flex h-full w-1/2 font-medium text-sm items-center pl-6">
                         <form onSubmit={handleSearchSubmit} className="flex flex-col w-96">
 
