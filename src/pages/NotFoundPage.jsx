@@ -1,6 +1,12 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+/**
+ * This component is used to display the 404 page
+ * 
+ * @returns {JSX.Element} component for 404 page
+ */
+
 const NotFoundPage = () => {
 
     return (
@@ -10,6 +16,7 @@ const NotFoundPage = () => {
             <Footer />
         </div>
     );
-  };
+
+};
   
-  export default NotFoundPage;
+export default NotFoundPage;

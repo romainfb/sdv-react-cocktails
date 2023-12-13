@@ -1,15 +1,24 @@
 import { Link } from "react-router-dom";
 
+/**
+ * This component is the header of the application
+ * 
+ * @returns {JSX.Element} the header of the application
+ */
+
 const Header = () => {
 
     const handleSearchSubmit = (event) => {
+
         event.preventDefault();
         const formData = new FormData(event.target);
         const search = formData.get('cocktail');
         window.location.href = `/cocktails/search/${search}`;
+
     }
 
     return (
+
         <header className="w-full h-fit shadow-lg text-stone-950">
 
             <div className="flex h-20 w-full px-8 justify-between items-center">
@@ -40,6 +49,7 @@ const Header = () => {
             </div>
         
         </header>
+        
     );
 
 };

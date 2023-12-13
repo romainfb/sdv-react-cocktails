@@ -1,12 +1,20 @@
+import { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import CocktailCard from '../../components/CocktailCard';
-import { useEffect, useState } from 'react';
 import Spinner from '../../components/Spinner';
+
+/**
+ * This component is used to display all cocktails
+ * and manage the API call
+ * 
+ * @returns {JSX.Element} component for all cocktails page
+ */
 
 const CocktailsListPage = () => {
 
     const [cocktailsList, setCocktailsList] = useState(null);
+
     useEffect(() => {
         (async () => {
             const cocktailsResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
@@ -17,7 +25,6 @@ const CocktailsListPage = () => {
 
     return (
         <>
-
         <Header />
 
         <section className="flex p-6 my-16 items-center justify-center flex-col">
@@ -43,9 +50,9 @@ const CocktailsListPage = () => {
         </section>
 
         <Footer />
-
         </>
-      );
-    }
+    );
+
+}
 
 export default CocktailsListPage;

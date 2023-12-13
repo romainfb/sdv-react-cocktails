@@ -1,14 +1,20 @@
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Footer from '../../../components/Footer';
 import Header from '../../../components/Header';
 import CocktailCard from '../../../components/CocktailCard';
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import Spinner from '../../../components/Spinner';
+
+/**
+ * This component is used to display cocktails by glasse
+ * and manage the API call
+ * 
+ * @returns {JSX.Element} component for cocktails by glasse page
+ */
 
 const CocktailsByGlassePage = () => {
 
     const {glasse} = useParams();
-    
     const [cocktails, setCocktails] = useState(null);
 
     useEffect(() => {
@@ -32,26 +38,22 @@ const CocktailsByGlassePage = () => {
 
     return (
         <>
-
         <Header />
 
         <section className="flex p-6 my-16 items-center justify-center flex-col">
 
             {cocktails ? (
                 <>
-
                     {cocktails["drinks"] ? (
-
                         <>
-                        <h2 className="text-4xl font-black pb-12 text-center">Cocktails avec un verre {glasse}</h2>
+                            <h2 className="text-4xl font-black pb-12 text-center">Cocktails avec un verre {glasse}</h2>
 
-                        {cocktails["drinks"].map((cocktail) => (
+                            {cocktails["drinks"].map((cocktail) => (
 
-                            < CocktailCard cocktailIdProp={cocktail.idDrink} cocktailNameProp={cocktail.strDrink} cocktailInstructionsProp={cocktail.strInstructions} cocktailThumbProp={cocktail.strDrinkThumb} key={cocktail.idDrink}/>
+                                < CocktailCard cocktailIdProp={cocktail.idDrink} cocktailNameProp={cocktail.strDrink} cocktailInstructionsProp={cocktail.strInstructions} cocktailThumbProp={cocktail.strDrinkThumb} key={cocktail.idDrink}/>
 
-                        ))}
+                            ))}
                         </>
-
                     ) : (
                         <h2 className="text-4xl font-black pb-12 text-center">Aucun cocktail n'a été trouvé avec ce verre</h2>
                     )}
@@ -67,9 +69,9 @@ const CocktailsByGlassePage = () => {
         </section>
 
         <Footer />
-
         </>
-      );
-    }
+    );
+
+}
 
 export default CocktailsByGlassePage;

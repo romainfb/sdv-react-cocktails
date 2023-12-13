@@ -1,6 +1,13 @@
+/**
+ * This component is the footer of the application
+ * 
+ * @returns {JSX.Element} the footer of the application
+ */
+
 const Footer = () => {
 
     return (
+
         <footer className="w-full h-20 shadow-lg text-stone-950">
 
             <div className="flex h-full w-full px-8 justify-between items-center flex-col sm:flex-row">
@@ -17,7 +24,9 @@ const Footer = () => {
             </div>
         
         </footer>
+        
     );
-  };
+
+};
   
-  export default Footer;
+export default Footer;

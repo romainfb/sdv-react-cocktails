@@ -1,14 +1,20 @@
-import Footer from '../../../components/Footer';
-import Header from '../../../components/Header';
 import CocktailCard from '../../../components/CocktailCard';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Footer from '../../../components/Footer';
+import Header from '../../../components/Header';
 import Spinner from '../../../components/Spinner';
+
+/**
+ * This component is used to display cocktails by ingredient
+ * and manage the API call
+ * 
+ * @returns {JSX.Element} component for cocktails by ingredient page
+ */
 
 const CocktailsByIngredientPage = () => {
 
     const {ingredient} = useParams();
-    
     const [cocktails, setCocktails] = useState(null);
 
     useEffect(() => {
@@ -32,26 +38,22 @@ const CocktailsByIngredientPage = () => {
 
     return (
         <>
-
         <Header />
 
         <section className="flex p-6 my-16 items-center justify-center flex-col">
 
             {cocktails ? (
                 <>
-
                     {cocktails["drinks"] ? (
+                        <>
+                            <h2 className="text-4xl font-black pb-12 text-center">Cocktails avec l'ingrédient {ingredient}</h2>
 
-                    <>
-                        <h2 className="text-4xl font-black pb-12 text-center">Cocktails avec l'ingrédient {ingredient}</h2>
+                            {cocktails["drinks"].map((cocktail) => (
 
-                        {cocktails["drinks"].map((cocktail) => (
+                                < CocktailCard cocktailIdProp={cocktail.idDrink} cocktailNameProp={cocktail.strDrink} cocktailInstructionsProp={cocktail.strInstructions} cocktailThumbProp={cocktail.strDrinkThumb} key={cocktail.idDrink}/>
 
-                            < CocktailCard cocktailIdProp={cocktail.idDrink} cocktailNameProp={cocktail.strDrink} cocktailInstructionsProp={cocktail.strInstructions} cocktailThumbProp={cocktail.strDrinkThumb} key={cocktail.idDrink}/>
-
-                        ))}
-                    </>
-
+                            ))}
+                        </>
                     ) : (
                         <h2 className="text-4xl font-black pb-12 text-center">Aucun cocktail n'a été trouvé avec cet ingrédient</h2>
                     )}
@@ -68,9 +70,9 @@ const CocktailsByIngredientPage = () => {
         </section>
 
         <Footer />
-
         </>
-      );
-    }
+    );
+
+}
 
 export default CocktailsByIngredientPage;

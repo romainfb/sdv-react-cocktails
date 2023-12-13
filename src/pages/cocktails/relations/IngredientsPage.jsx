@@ -1,12 +1,20 @@
-import Header from '../../../components/Header';
-import Footer from '../../../components/Footer';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../../../components/Header';
+import Footer from '../../../components/Footer';
 import Spinner from '../../../components/Spinner';
+
+/**
+ * This component is used to display ingredients
+ * and manage the API call
+ * 
+ * @returns {JSX.Element} component for ingredients page
+ */
 
 const IngredientsPages = () => {
 
     const [ingredients, setIngredients] = useState(null);
+
     useEffect(() => {
         (async () => {
             const ingredientsResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list');
@@ -23,6 +31,7 @@ const IngredientsPages = () => {
             {ingredients ? (
                 <>
                 <h2 className="text-4xl font-black text-center mb-20">Nos ingrédients</h2>
+
                 {ingredients["drinks"].map((drink, index) => (
 
                     <Link to={`/cocktails/ingredient/${drink.strIngredient1}`} key={index} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center">
@@ -38,13 +47,12 @@ const IngredientsPages = () => {
                 </>
             )}
 
-
         </div>
-
 
         < Footer />
         </>
-      );
-    }
+    );
+
+}
 
 export default IngredientsPages;

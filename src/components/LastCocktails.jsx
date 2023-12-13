@@ -2,12 +2,21 @@ import { Link } from 'react-router-dom';
 import CocktailCard from './CocktailCard';
 import Spinner from './Spinner';
 
+/**
+ * This component is a section with the last cocktails
+ * 
+ * @param {array} cocktailsProp is the array of cocktails
+ * @param {number} cocktailsAmountProp is the number of cocktails to display
+ * 
+ * @returns {JSX.Element} a section with the last cocktails
+ */
+
 const LastCocktails = ({cocktailsProp, cocktailsAmountProp}) => {
 
     const lastCocktails = cocktailsProp.slice(-cocktailsAmountProp);
 
     return (
-        <>
+
         <section className="flex p-6 my-16 items-center justify-center flex-col">
 
             {lastCocktails ? (
@@ -32,8 +41,8 @@ const LastCocktails = ({cocktailsProp, cocktailsAmountProp}) => {
 
         </section>
 
-        </>
-      );
-    }
+    );
+
+}
 
 export default LastCocktails;
