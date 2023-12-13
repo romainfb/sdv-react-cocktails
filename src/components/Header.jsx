@@ -13,7 +13,7 @@ const Header = () => {
         event.preventDefault();
         const formData = new FormData(event.target);
         const search = formData.get('cocktail');
-        window.location.href = `/cocktails/search/${search}`;
+        window.location.href = `/cocktails/search/${search.replaceAll("/", "§")}`;
 
     }
 

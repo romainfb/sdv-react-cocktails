@@ -15,7 +15,7 @@ import CocktailCard from '../../../components/CocktailCard';
 const CocktailsByCategoryPage = () => {
 
     const {category} = useParams();
-    const sanitizedCategory = category.replaceAll('-', '/');
+    const sanitizedCategory = category.replaceAll('§', '/');
     
     const [cocktails, setCocktails] = useState(null);
 

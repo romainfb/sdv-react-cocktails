@@ -15,11 +15,12 @@ import Spinner from '../../components/Spinner';
 const SearchCocktailsPage = () => {
 
     const {name} = useParams();
+    const sanitizedSearch = name.replace("§", "/");
     const [cocktails, setCocktails] = useState(null);
 
     useEffect(() => {
         (async () => {
-            const cocktailsResponse = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`);
+            const cocktailsResponse = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${sanitizedSearch}`);
 
             // Verification of id type, if not a number, set details to null
             // API don't manage this case, return a 200 response with no body returned for response
@@ -36,7 +37,7 @@ const SearchCocktailsPage = () => {
             }
             
         })();
-    }, [name]);
+    }, [sanitizedSearch]);
 
     return (
         <>
@@ -48,7 +49,7 @@ const SearchCocktailsPage = () => {
                 <>
                     {cocktails["drinks"] ? (
                     <>
-                        <h2 className="text-4xl font-black pb-12 text-center">Résultats de recherche pour "{name}"</h2>
+                        <h2 className="text-4xl font-black pb-12 text-center">Résultats de recherche pour "{sanitizedSearch}"</h2>
 
                         {cocktails["drinks"].map((cocktail) => (
 
