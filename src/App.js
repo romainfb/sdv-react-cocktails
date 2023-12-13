@@ -5,7 +5,7 @@ import CocktailDetailsPage from './pages/cocktails/CocktailDetailsPage';
 import CocktailsPage from './pages/cocktails/CocktailsPage';
 import SearchCocktailsPage from './pages/cocktails/SearchCocktailsPage';
 import CategoriesPage from './pages/cocktails/relations/CategoriesPage';
-import IngredientsPages from './pages/IngredientsPage';
+import IngredientsPages from './pages/cocktails/relations/IngredientsPage';
 import GlassesPages from './pages/cocktails/relations/GlassesPage';
 import CocktailsByCategoryPage from './pages/cocktails/filters/CocktailsByCategoryPage';
 import CocktailsByIngredientPage from './pages/cocktails/filters/CocktailsByIngredientPage';
