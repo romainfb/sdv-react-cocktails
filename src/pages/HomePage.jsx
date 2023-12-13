@@ -31,7 +31,7 @@ const HomePage = () => {
         <>
         < Header />
 
-        <div className="flex p-6 my-16 items-center justify-center flex-col px-48">
+        <div className="flex p-6 my-16 items-center justify-center flex-col px-20 sm:px-48">
 
             <h2 className="text-4xl font-black pb-12 text-center">Bienvenue sur la page d'accueil !</h2>
 
