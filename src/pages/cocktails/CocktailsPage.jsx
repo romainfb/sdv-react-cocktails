@@ -1,6 +1,6 @@
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import CocktailCard from '../components/CocktailCard';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import CocktailCard from '../../components/CocktailCard';
 import { useEffect, useState } from 'react';
 
 const CocktailsListPage = () => {

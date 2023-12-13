@@ -1,15 +1,15 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import CocktailDetailsPage from './pages/CocktailDetailsPage';
-import CocktailsPage from './pages/CocktailsPage';
-import SearchCocktailsPage from './pages/SearchCocktailsPage';
-import CategoriesPage from './pages/CategoriesPage';
+import CocktailDetailsPage from './pages/cocktails/CocktailDetailsPage';
+import CocktailsPage from './pages/cocktails/CocktailsPage';
+import SearchCocktailsPage from './pages/cocktails/SearchCocktailsPage';
+import CategoriesPage from './pages/cocktails/relations/CategoriesPage';
 import IngredientsPages from './pages/IngredientsPage';
-import GlassesPages from './pages/GlassesPage';
-import CocktailsByCategoryPage from './pages/CocktailsByCategoryPage';
-import CocktailsByIngredientPage from './pages/CocktailsByIngredientPage';
-import CocktailsByGlassePage from './pages/CocktailsByGlassePage';
+import GlassesPages from './pages/cocktails/relations/GlassesPage';
+import CocktailsByCategoryPage from './pages/cocktails/filters/CocktailsByCategoryPage';
+import CocktailsByIngredientPage from './pages/cocktails/filters/CocktailsByIngredientPage';
+import CocktailsByGlassePage from './pages/cocktails/filters/CocktailsByGlassePage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
