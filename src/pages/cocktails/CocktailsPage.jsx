@@ -2,6 +2,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import CocktailCard from '../../components/CocktailCard';
 import { useEffect, useState } from 'react';
+import Spinner from '../../components/Spinner';
 
 const CocktailsListPage = () => {
 
@@ -32,7 +33,10 @@ const CocktailsListPage = () => {
                     ))}
                 </>
             ) : (
-                <h2 className="text-4xl font-black pb-12 text-center">Chargement des cocktails...</h2>
+                <>
+                    <h2 className="text-4xl font-black pb-12 text-center">Chargement des cocktails...</h2>
+                    <Spinner />
+                </>
             )}
 
 

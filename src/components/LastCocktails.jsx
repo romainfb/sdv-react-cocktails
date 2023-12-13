@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import CocktailCard from './CocktailCard';
+import Spinner from './Spinner';
 
 const LastCocktails = ({cocktailsProp, cocktailsAmountProp}) => {
 
@@ -22,7 +23,10 @@ const LastCocktails = ({cocktailsProp, cocktailsAmountProp}) => {
                     ))}
                 </>
             ) : (
-                <h2 className="text-4xl font-black pb-12 text-center">Chargement des cocktails...</h2>
+                <>
+                    <h2 className="text-4xl font-black pb-12 text-center">Chargement des cocktails...</h2>
+                    <Spinner />
+                </>
             )}
 
 

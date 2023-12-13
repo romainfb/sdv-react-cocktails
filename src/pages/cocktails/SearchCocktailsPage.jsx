@@ -3,6 +3,7 @@ import Footer from '../../components/Footer';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CocktailCard from '../../components/CocktailCard';
+import Spinner from '../../components/Spinner';
 
 const SearchCocktailsPage = () => {
 
@@ -59,7 +60,10 @@ const SearchCocktailsPage = () => {
 
                     </>
                 ) : (
-                    <h2 className="text-4xl font-black pb-12 text-center">Chargement des résultats...</h2>
+                    <>
+                        <h2 className="text-4xl font-black pb-12 text-center">Chargement des cocktails...</h2>
+                        <Spinner />
+                    </>
                 )}
 
 

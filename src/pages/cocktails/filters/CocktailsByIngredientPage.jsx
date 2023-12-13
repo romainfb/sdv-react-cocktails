@@ -3,6 +3,7 @@ import Header from '../../../components/Header';
 import CocktailCard from '../../../components/CocktailCard';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Spinner from '../../../components/Spinner';
 
 const CocktailsByIngredientPage = () => {
 
@@ -57,7 +58,10 @@ const CocktailsByIngredientPage = () => {
 
                 </>
             ) : (
-                <h2 className="text-4xl font-black pb-12 text-center">Chargement des ingrédients...</h2>
+                <>
+                    <h2 className="text-4xl font-black pb-12 text-center">Chargement des ingrédients...</h2>
+                    <Spinner />
+                </>
             )}
 
 

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import Spinner from './Spinner';
 
 const RandomCategory = () => {
 
@@ -29,13 +30,16 @@ const RandomCategory = () => {
                     <h2 className="text-4xl font-black text-center mb-20">Catégorie aléatoire</h2>
                 </Link>
 
-                <Link to={`/categories/${category.strCategory}`} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center">
+                <Link to={`/cocktails/category/${category.strCategory}`} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center">
                         <h3 className="text-2xl font-black pb-4">{category.strCategory}</h3>
                 </Link>
                     
                 </>
             ) : (
-                <h2 className="text-4xl font-black pb-12 text-center">Chargement de la catégorie...</h2>
+                <>
+                    <h2 className="text-4xl font-black pb-12 text-center">Chargement de la catégorie...</h2>
+                    <Spinner />
+                </>
             )}
 
 

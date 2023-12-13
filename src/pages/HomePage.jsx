@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import { useEffect, useState } from 'react';
 import LastCocktails from '../components/LastCocktails';
 import RandomCategory from '../components/RandomCategory';
+import Spinner from '../components/Spinner';
 
 const HomePage = () => {
 
@@ -38,7 +39,10 @@ const HomePage = () => {
                     < LastCocktails cocktailsProp={cocktails} cocktailsAmountProp={4} />
                 </>
             ) : (
-                <h2 className="text-4xl font-black pb-12 text-center">Chargement des données...</h2>
+                <>
+                    <h2 className="text-4xl font-black pb-12 text-center">Chargement des données...</h2>
+                    <Spinner />
+                </>
             )}
 
             <RandomCategory />

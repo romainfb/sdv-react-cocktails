@@ -3,6 +3,7 @@ import Footer from '../../components/Footer';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import Spinner from '../../components/Spinner';
 
 const CocktailDetailsPage = () => {
 
@@ -72,7 +73,10 @@ const CocktailDetailsPage = () => {
 
                     </>
                 ) : (
-                    <h2 className="text-4xl font-black pb-12 text-center">Chargement des détails...</h2>
+                    <>
+                        <h2 className="text-4xl font-black pb-12 text-center">Chargement des détails...</h2>
+                        <Spinner />
+                    </>
                 )}
 
             </div>

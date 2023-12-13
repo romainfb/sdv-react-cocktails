@@ -2,6 +2,7 @@ import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Spinner from '../../../components/Spinner';
 
 const CategoriesPages = () => {
 
@@ -31,7 +32,10 @@ const CategoriesPages = () => {
                 ))}
                 </>
             ) : (
-                <h2 className="text-4xl font-black pb-12 text-center">Chargement des catégories...</h2>
+                <>
+                    <h2 className="text-4xl font-black pb-12 text-center">Chargement des catégories...</h2>
+                    <Spinner />
+                </>
             )}
 
 
