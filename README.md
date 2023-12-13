@@ -8,6 +8,8 @@ SDV React Cocktails is an application developed in React as part of our developm
 ## Workflow
 https://github.com/romainfb/sdv-react-cocktails/wiki/Workflow
 
+## Framework CSS
+TailwindCSS 3.3.6 : https://tailwindcss.com/docs/installation
 
 ## Project objectives
 
@@ -31,6 +33,11 @@ https://github.com/romainfb/sdv-react-cocktails/wiki/Workflow
 | Design libre mais propre. Tous les éléments des différentes pages doivent être stylisés et le responsive géré. Utilisation de libs (bootstrap, tailwind etc) possible.  | Done!  |
 | Des points seront ajoutés / retirés en fonction de la qualité de code : nommage des variables, DRY (duplication de code) etc.  | Done!  |
 
+| BONUS (FRENCH)    | Achieved |
+| ------------- | ------------- |
+| Corriger l'appel API des catégories qui contiennent des "/"  | Done!  |
+| Créer une page 404 en cas de page introuvable  | Done!  |
+| Gérer les absences de réponse de l'API  | Done!  |
 
 ## Contributors
 
