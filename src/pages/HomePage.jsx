@@ -38,7 +38,7 @@ const HomePage = () => {
                     < LastCocktails cocktailsProp={cocktails} cocktailsAmountProp={4} />
                 </>
             ) : (
-                <p>En cours de chargement</p>
+                <h2 className="text-4xl font-black pb-12 text-center">Chargement des données...</h2>
             )}
 
             <RandomCategory />

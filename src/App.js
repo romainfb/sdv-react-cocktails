@@ -24,9 +24,9 @@ function App() {
         <Route path="/ingredients" element={<IngredientsPages />} />
         <Route path="/glasses" element={<GlassesPages />} />
 
-        <Route path="/categories/:category" element={<CocktailsByCategoryPage />} />
-        <Route path="/ingredients/:ingredient" element={<CocktailsByIngredientPage />} />
-        <Route path="/glasses/:glasse" element={<CocktailsByGlassePage />} />
+        <Route path="/cocktails/category/:category" element={<CocktailsByCategoryPage />} />
+        <Route path="/cocktails/ingredient/:ingredient" element={<CocktailsByIngredientPage />} />
+        <Route path="/cocktails/glasse/:glasse" element={<CocktailsByGlassePage />} />
 
         <Route path="/cocktails/details/:id" element={<CocktailDetailsPage />} />
         <Route path="/cocktails/search/:name" element={<SearchCocktailsPage />} />

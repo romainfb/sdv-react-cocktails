@@ -6,15 +6,11 @@ import { useEffect, useState } from 'react';
 const CocktailsListPage = () => {
 
     const [cocktailsList, setCocktailsList] = useState(null);
-
     useEffect(() => {
         (async () => {
-
             const cocktailsResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
             const cocktailsResponseData = await cocktailsResponse.json();
-
             setCocktailsList(cocktailsResponseData["drinks"]);
-
         })();
     }, []);
 
@@ -31,7 +27,7 @@ const CocktailsListPage = () => {
 
                     {cocktailsList.map((cocktail) => (
 
-                        < CocktailCard cocktailIdProp={cocktail.idDrink} cocktailNameProp={cocktail.strDrink} cocktailInstructionsProp={cocktail.strInstructions} cocktailThumbProp={cocktail.strDrinkThumb} />
+                        < CocktailCard cocktailIdProp={cocktail.idDrink} cocktailNameProp={cocktail.strDrink} cocktailInstructionsProp={cocktail.strInstructions} cocktailThumbProp={cocktail.strDrinkThumb} key={cocktail.idDrink}/>
 
                     ))}
                 </>

@@ -17,7 +17,7 @@ const LastCocktails = ({cocktailsProp, cocktailsAmountProp}) => {
 
                     {lastCocktails.map((cocktail) => (
 
-                        < CocktailCard cocktailIdProp={cocktail.idDrink} cocktailNameProp={cocktail.strDrink} cocktailInstructionsProp={cocktail.strInstructions} cocktailThumbProp={cocktail.strDrinkThumb} />
+                        < CocktailCard cocktailIdProp={cocktail.idDrink} cocktailNameProp={cocktail.strDrink} cocktailInstructionsProp={cocktail.strInstructions} cocktailThumbProp={cocktail.strDrinkThumb} key={cocktail.idDrink}/>
 
                     ))}
                 </>

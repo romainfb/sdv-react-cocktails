@@ -14,9 +14,17 @@ const CocktailsByIngredientPage = () => {
         (async () => {
 
             const cocktailsResponse = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`);
-            const cocktailsResponseData = await cocktailsResponse.json();
 
-            setCocktails(cocktailsResponseData["drinks"]);
+            // Verification of id type, if not a number, set details to null
+            // API don't manage this case, return a 200 response with no body returned for response
+
+            try {
+                const cocktailsResponseData = await cocktailsResponse.json();
+                setCocktails(cocktailsResponseData);
+            } catch (error) {
+                setCocktails({ "drinks": null });
+                console.log(error);
+            }
 
         })();
     }, [ingredient]);
@@ -30,13 +38,23 @@ const CocktailsByIngredientPage = () => {
 
             {cocktails ? (
                 <>
-                    <h2 className="text-4xl font-black pb-12 text-center">Cocktails avec l'ingrédient {ingredient}</h2>
 
-                    {cocktails.map((cocktail) => (
+                    {cocktails["drinks"] ? (
 
-                        < CocktailCard cocktailIdProp={cocktail.idDrink} cocktailNameProp={cocktail.strDrink} cocktailInstructionsProp={cocktail.strInstructions} cocktailThumbProp={cocktail.strDrinkThumb} />
+                    <>
+                        <h2 className="text-4xl font-black pb-12 text-center">Cocktails avec l'ingrédient {ingredient}</h2>
 
-                    ))}
+                        {cocktails["drinks"].map((cocktail) => (
+
+                            < CocktailCard cocktailIdProp={cocktail.idDrink} cocktailNameProp={cocktail.strDrink} cocktailInstructionsProp={cocktail.strInstructions} cocktailThumbProp={cocktail.strDrinkThumb} key={cocktail.idDrink}/>
+
+                        ))}
+                    </>
+
+                    ) : (
+                        <h2 className="text-4xl font-black pb-12 text-center">Aucun cocktail n'a été trouvé avec cet ingrédient</h2>
+                    )}
+
                 </>
             ) : (
                 <h2 className="text-4xl font-black pb-12 text-center">Chargement des ingrédients...</h2>
