@@ -36,6 +36,7 @@ const IngredientsPages = () => {
 
                     <Link to={`/cocktails/ingredient/${drink.strIngredient1}`} key={index} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center">
                             <h3 className="text-2xl font-black pb-4">{drink.strIngredient1}</h3>
+                            <img src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient1}-Small.png`} alt="" />
                     </Link>
                     
                 ))}
