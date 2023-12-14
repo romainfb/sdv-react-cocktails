@@ -48,6 +48,7 @@ TailwindCSS 3.3.6 : https://tailwindcss.com/docs/installation
 | Versionner le projet | Done!  |
 | Fonctionnalité de craft de cocktails | Done!  |
 | Affichage du mot recherché dans la page de résultats de recherche | Done!  |
+| Utilisation de tailwind | Done!  |
 
 ## Contributors
 
