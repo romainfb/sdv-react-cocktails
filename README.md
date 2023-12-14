@@ -5,6 +5,10 @@
 
 SDV React Cocktails is an application developed in React as part of our development license training. It needs to retrieve information using a public API, process it and arrange it in several components.
 
+## Live deployment (The routes are not operational)
+
+http://45.155.171.156
+
 ## Workflow
 https://github.com/romainfb/sdv-react-cocktails/wiki/Workflow
 
