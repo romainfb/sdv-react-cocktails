@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import CocktailCard from '../../components/CocktailCard';
@@ -8,20 +7,12 @@ import Spinner from '../../components/Spinner';
  * This component is used to display all cocktails
  * and manage the API call
  * 
+ * @param {object} cocktailsProp cocktails object
+ * 
  * @returns {JSX.Element} component for all cocktails page
  */
 
-const CocktailsListPage = () => {
-
-    const [cocktailsList, setCocktailsList] = useState(null);
-
-    useEffect(() => {
-        (async () => {
-            const cocktailsResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
-            const cocktailsResponseData = await cocktailsResponse.json();
-            setCocktailsList(cocktailsResponseData["drinks"]);
-        })();
-    }, []);
+const CocktailsListPage = ({cocktailsProp}) => {
 
     return (
         <>
@@ -29,11 +20,11 @@ const CocktailsListPage = () => {
 
         <section className="flex p-6 my-16 items-center justify-center flex-col">
 
-            {cocktailsList ? (
+            {cocktailsProp ? (
                 <>
                     <h2 className="text-4xl font-black pb-12 text-center">Tous nos cocktails</h2>
 
-                    {cocktailsList.map((cocktail) => (
+                    {cocktailsProp.map((cocktail) => (
 
                         < CocktailCard cocktailIdProp={cocktail.idDrink} cocktailNameProp={cocktail.strDrink} cocktailInstructionsProp={cocktail.strInstructions} cocktailThumbProp={cocktail.strDrinkThumb} key={cocktail.idDrink}/>
 
