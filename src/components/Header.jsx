@@ -47,6 +47,7 @@ const Header = () => {
                     <Link to="/categories" className="flex items-center px-4 h-fit lg:py-0 py-3">Nos catégories</Link>
                     <Link to="/ingredients" className="flex items-center px-4 h-fit lg:py-0 py-3">Nos ingrédients</Link>
                     <Link to="/glasses" className="flex items-center px-4 h-fit lg:py-0 py-3">Nos verres</Link>
+                    <Link to="/crafter" className="flex items-center px-4 h-fit lg:py-0 py-3">Fabrication</Link>
                 </nav>
 
             </div>

@@ -11,6 +11,7 @@ import CocktailsByCategoryPage from './pages/cocktails/filters/CocktailsByCatego
 import CocktailsByIngredientPage from './pages/cocktails/filters/CocktailsByIngredientPage';
 import CocktailsByGlassePage from './pages/cocktails/filters/CocktailsByGlassePage';
 import NotFoundPage from './pages/NotFoundPage';
+import CocktailCrafterPage from './pages/cocktails/CocktailCrafterPage';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/ingredients" element={<IngredientsPages />} />
         <Route path="/glasses" element={<GlassesPages />} />
+        <Route path="/crafter" element={<CocktailCrafterPage />} />
 
         <Route path="/cocktails/category/:category" element={<CocktailsByCategoryPage />} />
         <Route path="/cocktails/ingredient/:ingredient" element={<CocktailsByIngredientPage />} />
