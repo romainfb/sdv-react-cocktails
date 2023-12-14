@@ -5,6 +5,10 @@
 
 SDV React Cocktails is an application developed in React as part of our development license training. It needs to retrieve information using a public API, process it and arrange it in several components.
 
+## Live deployment (The routes are not operational)
+
+http://45.155.171.156
+
 ## Workflow
 https://github.com/romainfb/sdv-react-cocktails/wiki/Workflow
 
@@ -38,6 +42,10 @@ TailwindCSS 3.3.6 : https://tailwindcss.com/docs/installation
 | Corriger l'appel API des catégories qui contiennent des "/"  | Done!  |
 | Créer une page 404 en cas de page introuvable  | Done!  |
 | Gérer les absences de réponse de l'API  | Done!  |
+| Afficher les images des ingrédients  | Done!  |
+| Déployer l'application | Done!  |
+| Créer un workflow | Done!  |
+| Versionner le projet | Done!  |
 
 ## Contributors
 
