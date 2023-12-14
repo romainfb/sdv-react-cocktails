@@ -46,6 +46,8 @@ TailwindCSS 3.3.6 : https://tailwindcss.com/docs/installation
 | Déployer l'application | Done!  |
 | Créer un workflow | Done!  |
 | Versionner le projet | Done!  |
+| Fonctionnalité de craft de cocktails | Done!  |
+| Affichage du mot recherché dans la page de résultats de recherche | Done!  |
 
 ## Contributors
 
