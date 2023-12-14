@@ -58,7 +58,7 @@ const CocktailDetailsPage = () => {
 
                             {/* Cocktail informations */}
 
-                            <p className="pt-4"><strong>Catégorie:</strong> <Link to={`/categories/${details["drinks"][0].strCategory}`}>{details["drinks"][0].strCategory}</Link></p>
+                            <p className="pt-4"><strong>Catégorie:</strong> <Link to={`/cocktails/category/${details["drinks"][0].strCategory}`}>{details["drinks"][0].strCategory}</Link></p>
                             <p className="pt-4 pb-3"><strong>Ingrédients:</strong></p>
 
                             {/* Cocktail ingredients */}

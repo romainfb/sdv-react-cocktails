@@ -21,7 +21,6 @@ const CategoriesPages = () => {
                 const categoriesResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list');
                 setCategories(await categoriesResponse.json());
             } catch (error) {
-                setCategories({ "drinks": null });
                 console.log(error);
             }
         })();
