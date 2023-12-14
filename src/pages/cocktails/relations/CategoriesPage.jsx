@@ -34,7 +34,7 @@ const CategoriesPages = () => {
 
                 {categories["drinks"].map((drink, index) => (
 
-                    <Link to={`/cocktails/category/${drink.strCategory.replaceAll('/', '§')}`} key={index} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center">
+                    <Link to={`/cocktails/category/${drink.strCategory.replaceAll('/', '§')}`} key={index} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center hover:scale-105 duration-500">
                             <h3 className="text-2xl font-black pb-4">{drink.strCategory}</h3>
                     </Link>
                     

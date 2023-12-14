@@ -34,7 +34,7 @@ const GlassesPages = () => {
 
                 {glasses["drinks"].map((drink, index) => (
 
-                    <Link to={`/cocktails/glasse/${drink.strGlass}`} key={index} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center">
+                    <Link to={`/cocktails/glasse/${drink.strGlass}`} key={index} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center hover:scale-105 duration-500">
                             <h3 className="text-2xl font-black pb-4">{drink.strGlass}</h3>
                     </Link>
                     

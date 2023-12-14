@@ -35,7 +35,7 @@ const RandomCategory = () => {
                         <h2 className="text-4xl font-black text-center mb-20">Catégorie aléatoire</h2>
                     </Link>
 
-                    <Link to={`/cocktails/category/${category.strCategory.replaceAll('/', '§')}`} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center">
+                    <Link to={`/cocktails/category/${category.strCategory.replaceAll('/', '§')}`} className="flex flex-col w-1/2 shadow-lg rounded-xl p-8 mb-6 items-center hover:scale-105 duration-500">
                             <h3 className="text-2xl font-black pb-4">{category.strCategory}</h3>
                     </Link>
                     

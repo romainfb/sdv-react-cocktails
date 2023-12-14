@@ -16,7 +16,7 @@ const CocktailCard = ({cocktailIdProp, cocktailNameProp, cocktailInstructionsPro
     return (
 
         <>
-            <Link to={`/cocktails/details/${cocktailIdProp}`} className="w-5/6 shadow-lg rounded-xl p-8 mb-6 lg:w-1/2 reveal">
+            <Link to={`/cocktails/details/${cocktailIdProp}`} className="w-5/6 shadow-lg rounded-xl p-8 mb-6 lg:w-1/2 reveal hover:scale-105 duration-500">
                 
                 <h3 className="text-2xl font-black pb-4">{cocktailNameProp}</h3>
                 
