@@ -17,8 +17,12 @@ const GlassesPages = () => {
 
     useEffect(() => {
         (async () => {
-            const glassesResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?g=list');
-            setGlasses(await glassesResponse.json());
+            try{
+                const glassesResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?g=list');
+                setGlasses(await glassesResponse.json());
+            } catch (error) {
+                console.log(error);
+            }
         })();
     }, []);
 

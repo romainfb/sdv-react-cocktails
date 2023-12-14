@@ -22,8 +22,7 @@ const CocktailsByIngredientPage = () => {
 
             const cocktailsResponse = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`);
 
-            // Verification of id type, if not a number, set details to null
-            // API don't manage this case, return a 200 response with no body returned for response
+            // Error handler for API response
 
             try {
                 const cocktailsResponseData = await cocktailsResponse.json();

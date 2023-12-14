@@ -25,9 +25,6 @@ const SearchCocktailsPage = () => {
             // Verification of id type, if not a number, set details to null
             // API don't manage this case, return a 200 response with no body returned for response
 
-            // Verification of id type, if not a number, set details to null
-            // API don't manage this case, return a 200 response with no body returned for response
-
             try {
                 const cocktailsResponseData = await cocktailsResponse.json();
                 setCocktails(cocktailsResponseData);

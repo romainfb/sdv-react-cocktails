@@ -17,8 +17,12 @@ const IngredientsPages = () => {
 
     useEffect(() => {
         (async () => {
-            const ingredientsResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list');
-            setIngredients(await ingredientsResponse.json());
+            try{
+                const ingredientsResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list');
+                setIngredients(await ingredientsResponse.json());
+            }catch (error) {
+                console.log(error);
+            }
         })();
     }, []);
 

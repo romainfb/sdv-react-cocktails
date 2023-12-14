@@ -17,9 +17,13 @@ const CocktailsListPage = () => {
 
     useEffect(() => {
         (async () => {
-            const cocktailsResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
-            const cocktailsResponseData = await cocktailsResponse.json();
-            setCocktailsList(cocktailsResponseData["drinks"]);
+            try {
+                const cocktailsResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
+                const cocktailsResponseData = await cocktailsResponse.json();
+                setCocktailsList(cocktailsResponseData["drinks"]);
+            } catch (error) {
+                console.log(error);
+            }
         })();
     }, []);
 

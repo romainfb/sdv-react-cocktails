@@ -14,12 +14,14 @@ const RandomCategory = () => {
 
     useEffect(() => {
         (async () => {
-
-            const categoriesResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list');
-            const categoriesResponseData = await categoriesResponse.json();
-
-            setCategories(categoriesResponseData["drinks"][Math.floor(Math.random() * categoriesResponseData["drinks"].length)]);
-
+            try{
+                const categoriesResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list');
+                const categoriesResponseData = await categoriesResponse.json();
+    
+                setCategories(categoriesResponseData["drinks"][Math.floor(Math.random() * categoriesResponseData["drinks"].length)]);
+            } catch (error) {
+                console.log(error);
+            }
         })();
     }, []);
 
