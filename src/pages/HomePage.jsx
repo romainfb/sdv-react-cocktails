@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LastCocktails from '../components/LastCocktails';
@@ -8,13 +9,23 @@ import Spinner from '../components/Spinner';
  * This component is used to display the home page
  * and manage the API call
  * 
- * @param {object} cocktailsProp cocktails object
- * @param {object} categoriesProp categories object
- * 
  * @returns {JSX.Element} component for home page
  */
 
-const HomePage = ({cocktailsProp, categoriesProp}) => {
+const HomePage = () => {
+
+    const [cocktails, setCocktails] = useState(null);
+
+    useEffect(() => {
+        (async () => {
+
+            const cocktailsResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
+            const cocktailsResponseData = await cocktailsResponse.json();
+
+            setCocktails(cocktailsResponseData["drinks"]);
+
+        })();
+    }, []);
 
     return (
         <>
@@ -30,10 +41,10 @@ const HomePage = ({cocktailsProp, categoriesProp}) => {
 
         </div>
 
-        {cocktailsProp ? (
+        {cocktails ? (
             <>
                 {/* Last cocktails category section */}
-                < LastCocktails cocktailsProp={cocktailsProp} cocktailsAmountProp={4} />
+                < LastCocktails cocktailsProp={cocktails} cocktailsAmountProp={4} />
             </>
         ) : (
             <>
@@ -44,7 +55,7 @@ const HomePage = ({cocktailsProp, categoriesProp}) => {
 
         {/* Random category section */}
 
-        <RandomCategory categoriesProp={categoriesProp}/>
+        <RandomCategory />
 
         < Footer />
         </>

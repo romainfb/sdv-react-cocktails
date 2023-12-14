@@ -1,17 +1,28 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import Spinner from './Spinner';
 
 /**
  * This component is a section with a random category
  * 
- * @param {object} categoriesProp is the categories object
- * 
  * @returns {JSX.Element} a section with a random category
  */
 
-const RandomCategory = ({categoriesProp}) => {
+const RandomCategory = () => {
 
-    const category = categoriesProp ? categoriesProp["drinks"][Math.floor(Math.random() * categoriesProp["drinks"].length)] : null;
+    const [category, setCategories] = useState(null);
+
+    useEffect(() => {
+        (async () => {
+
+            const categoriesResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list');
+            const categoriesResponseData = await categoriesResponse.json();
+
+            setCategories(categoriesResponseData["drinks"][Math.floor(Math.random() * categoriesResponseData["drinks"].length)]);
+
+        })();
+    }, []);
+
 
     return (
 

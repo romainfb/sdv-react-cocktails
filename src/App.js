@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import HomePage from './pages/HomePage';
 import CocktailDetailsPage from './pages/cocktails/CocktailDetailsPage';
 import CocktailsPage from './pages/cocktails/CocktailsPage';
@@ -15,59 +14,16 @@ import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
 
-  const [categories, setCategories] = useState(null);
-
-  useEffect(() => {
-      (async () => {
-          const categoriesResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list');
-          setCategories(await categoriesResponse.json());
-      })();
-  }, []);
-
-
-  const [cocktails, setCocktails] = useState(null);
-
-  useEffect(() => {
-      (async () => {
-
-          const cocktailsResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
-          const cocktailsResponseData = await cocktailsResponse.json();
-
-          setCocktails(cocktailsResponseData["drinks"]);
-
-      })();
-  }, []);
-
-
-  const [ingredients, setIngredients] = useState(null);
-
-  useEffect(() => {
-      (async () => {
-          const ingredientsResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list');
-          setIngredients(await ingredientsResponse.json());
-      })();
-  }, []);
-
-
-  const [glasses, setGlasses] = useState(null);
-
-  useEffect(() => {
-      (async () => {
-          const glassesResponse = await fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?g=list');
-          setGlasses(await glassesResponse.json());
-      })();
-  }, []);
-
   return (
     <BrowserRouter>
       <Routes>
         
-        <Route path="/" element={<HomePage cocktailsProp={cocktails} categoriesProp={categories}/>} />
+        <Route path="/" element={<HomePage />} />
 
-        <Route path="/cocktails" element={<CocktailsPage cocktailsProp={cocktails}/>} />
-        <Route path="/categories" element={<CategoriesPage categoriesProp={categories}/>} />
-        <Route path="/ingredients" element={<IngredientsPages ingredientsProp={ingredients}/>} />
-        <Route path="/glasses" element={<GlassesPages glassesProp={glasses}/>} />
+        <Route path="/cocktails" element={<CocktailsPage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/ingredients" element={<IngredientsPages />} />
+        <Route path="/glasses" element={<GlassesPages />} />
 
         <Route path="/cocktails/category/:category" element={<CocktailsByCategoryPage />} />
         <Route path="/cocktails/ingredient/:ingredient" element={<CocktailsByIngredientPage />} />
