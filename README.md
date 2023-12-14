@@ -42,6 +42,10 @@ TailwindCSS 3.3.6 : https://tailwindcss.com/docs/installation
 | Corriger l'appel API des catégories qui contiennent des "/"  | Done!  |
 | Créer une page 404 en cas de page introuvable  | Done!  |
 | Gérer les absences de réponse de l'API  | Done!  |
+| Afficher les images des ingrédients  | Done!  |
+| Déployer l'application | Done!  |
+| Créer un workflow | Done!  |
+| Versionner le projet | Done!  |
 
 ## Contributors
 
